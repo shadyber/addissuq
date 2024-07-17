@@ -4,8 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Addis Suq : Comming Soon</title>
-
+        <title>Addis Suq : The Ultimate Source of Information </title>
+        <!-- Css -->
+        <!-- Main Css -->
+        <link rel="stylesheet" href="/assets/libs/icofont/icofont.min.css">
+        <link rel="stylesheet" href="/assets/css/tailwind.min.css">
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -15,198 +18,256 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
         <!-- MDB -->
         <link rel="stylesheet" href="/css/mdb.min.css" />
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.absolute{position:absolute}.relative{position:relative}.-left-20{left:-5rem}.top-0{top:0px}.-bottom-16{bottom:-4rem}.-left-16{left:-4rem}.-mx-3{margin-left:-0.75rem;margin-right:-0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.size-12{width:3rem;height:3rem}.size-5{width:1.25rem;height:1.25rem}.size-6{width:1.5rem;height:1.5rem}.h-12{height:3rem}.h-40{height:10rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-full{width:100%}.w-\[calc\(100\%\+8rem\)\]{width:calc(100% + 8rem)}.w-auto{width:auto}.max-w-\[877px\]{max-width:877px}.max-w-2xl{max-width:42rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.self-center{align-self:center}.overflow-hidden{overflow:hidden}.rounded-\[10px\]{border-radius:10px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-sm{border-radius:0.125rem}.bg-\[\#FF2D20\]\/10{background-color:rgb(255 45 32 / 0.1)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-white{--tw-gradient-to:rgb(255 255 255 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-white{--tw-gradient-to:#fff var(--tw-gradient-to-position)}.stroke-\[\#FF2D20\]{stroke:#FF2D20}.object-cover{object-fit:cover}.object-top{object-position:top}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.font-sans{font-family:Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-sm\/relaxed{font-size:0.875rem;line-height:1.625}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-semibold{font-weight:600}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-\[0px_14px_34px_0px_rgba\(0\2c 0\2c 0\2c 0\.08\)\]{--tw-shadow:0px 14px 34px 0px rgba(0,0,0,0.08);--tw-shadow-colored:0px 14px 34px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-transparent{--tw-ring-color:transparent}.ring-white\/\[0\.05\]{--tw-ring-color:rgb(255 255 255 / 0.05)}.drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.06\)\]{--tw-drop-shadow:drop-shadow(0px 4px 34px rgba(0,0,0,0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.25\)\]{--tw-drop-shadow:drop-shadow(0px 4px 34px rgba(0,0,0,0.25));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.selection\:bg-\[\#FF2D20\] *::selection{--tw-bg-opacity:1;background-color:rgb(255 45 32 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-\[\#FF2D20\]::selection{--tw-bg-opacity:1;background-color:rgb(255 45 32 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.hover\:text-black\/70:hover{color:rgb(0 0 0 / 0.7)}.hover\:ring-black\/20:hover{--tw-ring-color:rgb(0 0 0 / 0.2)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus-visible\:ring-1:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 45 32 / var(--tw-ring-opacity))}@media (min-width: 640px){.sm\:size-16{width:4rem;height:4rem}.sm\:size-6{width:1.5rem;height:1.5rem}.sm\:pt-5{padding-top:1.25rem}}@media (min-width: 768px){.md\:row-span-3{grid-row:span 3 / span 3}}@media (min-width: 1024px){.lg\:col-start-2{grid-column-start:2}.lg\:h-16{height:4rem}.lg\:max-w-7xl{max-width:80rem}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:flex-col{flex-direction:column}.lg\:items-end{align-items:flex-end}.lg\:justify-center{justify-content:center}.lg\:gap-8{gap:2rem}.lg\:p-10{padding:2.5rem}.lg\:pb-10{padding-bottom:2.5rem}.lg\:pt-0{padding-top:0px}.lg\:text-\[\#FF2D20\]{--tw-text-opacity:1;color:rgb(255 45 32 / var(--tw-text-opacity))}}@media (prefers-color-scheme: dark){.dark\:block{display:block}.dark\:hidden{display:none}.dark\:bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}.dark\:bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity))}.dark\:via-zinc-900{--tw-gradient-to:rgb(24 24 27 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #18181b var(--tw-gradient-via-position), var(--tw-gradient-to)}.dark\:to-zinc-900{--tw-gradient-to:#18181b var(--tw-gradient-to-position)}.dark\:text-white\/50{color:rgb(255 255 255 / 0.5)}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-white\/70{color:rgb(255 255 255 / 0.7)}.dark\:ring-zinc-800{--tw-ring-opacity:1;--tw-ring-color:rgb(39 39 42 / var(--tw-ring-opacity))}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:hover\:text-white\/70:hover{color:rgb(255 255 255 / 0.7)}.dark\:hover\:text-white\/80:hover{color:rgb(255 255 255 / 0.8)}.dark\:hover\:ring-zinc-700:hover{--tw-ring-opacity:1;--tw-ring-color:rgb(63 63 70 / var(--tw-ring-opacity))}.dark\:focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 45 32 / var(--tw-ring-opacity))}.dark\:focus-visible\:ring-white:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 255 255 / var(--tw-ring-opacity))}}
-        </style>
 
-        <style>
-            /* Default height for small devices */
-            #intro {
-                height: 600px;
-                /* Margin to fix overlapping fixed navbar */
-                margin-top: 58px;
-            }
-            @media (max-width: 991px) {
-                #intro {
-                    /* Margin to fix overlapping fixed navbar */
-                    margin-top: 45px;
-                }
-            }
-        </style>
 
     </head>
     <body class="font-sans antialiased">
 
 
-    <!-- Background image -->
-    <div id="intro" class="p-5 text-center bg-image shadow-1-strong"
-         style="background-image: url('/img/205.jpg');">
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
-            <div class="d-flex justify-content-center align-items-center h-100">
-                <div class="text-white px-4" data-mdb-theme="dark">
-                    <h1 class="mb-3">Coming Soon!</h1>
+    <!-- leftbar-tab-menu -->
+    <div class="h-full w-full">
+        <!-- Code block starts -->
+        <nav class="bg-white shadow block fixed right-0 left-0 z-10 py-4">
+            <div class="mx-auto container px-6 py-0">
+                <div class="flex items-center justify-between">
+                    <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 rounded-md flex w-full sm:w-auto items-center sm:items-stretch justify-start sm:justify-start">
+                        <div class="flex items-center">
+                            <a href="/" class="logo">
+                      <span>
+                          <img src="/assets/images/logo-sm.png" alt="logo-small" class="logo-sm h-8 align-middle inline-block">
+                      </span>
 
-                    <!-- Time Counter -->
-                    <h3 id="time-counter" class="border border-light my-4 p-4"></h3>
+                    <span class="self-center">
+                        <img src="/assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-light hidden dark:inline-block ms-1 group-data-[sidebar=dark]:inline-block">
+                        <img src="/assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-dark inline-block dark:hidden ms-1 group-data-[sidebar=dark]:hidden">
+                    </span>
+                            </a>
+                            </a>
+                        </div>
+                    </button>
+                    <div class="flex">
+                        <div class="ltr:me-2 ltr:md:me-4 rtl:me-0 rtl:ms-2 rtl:lg:me-0 rtl:md:ms-4">
 
-                    <p>We're working hard to finish the development of this site.</p>
-
-                    <p>Until then have visit our online store </p>
-
-                    <a class="btn btn-outline-light btn-lg m-2" href="https://shegerstor.com" role="button" data-mdb-ripple-init
-                       rel="nofollow" target="_blank">Visit ShegerStor</a>
-                    <a class="btn btn-outline-light btn-lg m-2" href="#"  data-mdb-ripple-init
-                       role="button">Download ShegerStor</a>
+                            <button id="toggle-theme" class="flex rounded-full md:me-0 relative">
+                                <span class="me-2">Light</span>
+                                <span data-lucide="moon" class="top-icon w-5 h-5 light "></span>
+                                <span data-lucide="sun" class="top-icon w-5 h-5 dark hidden"></span>
+                                <span class="ms-2">Dark</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
     </div>
-    <!-- Background image -->
-    </header>
-    <!--Main Navigation-->
-    <!--Main layout-->
-    <main class="mt-5">
-        <div class="container">
-            <!--Section: Content-->
-            <section>
-                <div class="row">
-                    <div class="col-md-6 gx-5 mb-4 d-lg-flex align-items-center">
-                        <div>
-                            <h4><strong>Subscribe to stay up to date </strong></h4>
-                            <p class="text-muted">
-                                Subscribe and stay up to date
-                            <p>our first subscribers are always loyal customers </p>
-                            </p>
-                        </div>
-                    </div>
 
-                    <div class="col-md-6 gx-5 mb-4">
-                        <div class="badge-notification text-green-400 text-xs">
-                            @if(session()->has('success'))
-                                <p>
-                                    {{ session()->get('success') }}
+    <div class="flex flex-col">
+        <div class="relative w-full py-[70px]">
+            <div class="container z-1">
+                <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4 justify-center">
+                    <div class="col-span-12 sm:col-span-12  md:col-span-12 lg:col-span-12 xl:col-span-12 ">
+                        <div class=" w-full relative mb-10">
+                            <div class="flex-auto p-4">
+                                <div class="text-center mt-10">
+                                    <h4 class="my-1 font-semibold text-[30px] md:text-[40px] dark:text-slate-200 mb-5 leading-12">Blogs Section For Everyone</h4>
+                                    <h6 class="text-gray-500 dark:text-gray-400 text-lg font-medium">Lorem Ipsum is simply dummy text of the printing <br> and typesetting industry.</h6>
+                                </div>
+                            </div><!--end card-body-->
+                        </div> <!--end card-->
+                    </div><!--end col-->
+                </div><!--end inner-grid-->
+                <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                    <div class="col-span-12 sm:col-span-12  md:col-span-12 lg:col-span-8 xl:col-span-9 ">
+                        <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl shadow-lg w-full relative p-4 mb-4">
+                            <div class="flex justify-between">
+                                <p class="dark:text-slate-200">
+                                    <span class="font-medium border-b border-dashed border-pink-400">Latest Posts </span>
                                 </p>
-                            @endif
-
-                            @if ($errors->any())
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            @endif
+                                <p class="dark:text-slate-200">
+                                    <span class="font-medium">Today </span>: 21 Augest 2023
+                                </p>
+                            </div>
                         </div>
+                        <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl shadow-lg w-full relative p-4 mb-4">
+                            <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                <div class="col-span-12 sm:col-span-6  md:col-span-4 lg:col-span-4 xl:col-span-4 ">
+                                    <img src="/assets/images/widgets/sm-3.jpg" alt="" class="max-w-full h-auto rounded-xl">
+                                </div><!--end col-->
+                                <div class="col-span-12 sm:col-span-6  md:col-span-8 lg:col-span-8 xl:col-span-8 ">
+                                    <div class=" h-full flex flex-col p-3">
+                                        <div class="w-full block">
+                                            <span class="text-[12px] bg-pink-500/10 text-pink-500 dark:text-pink-600 rounded font-medium py-1 px-2 inline-block mb-3">Helth</span>
+                                            <span class="text-slate-700 dark:text-slate-300 font-medium text-xs ms-2">23 Aug 2023</span>
+                                        </div>
+                                        <a href="#" class="text-[20px] md:text-3xl lg:text-3xl xl:text-[32px] leading-[30px] mb-5 md:mb-0 font-spectral font-semibold  text-gray-800 dark:text-slate-200 block">
+                                            This is a best Blogs card for your business template.
+                                        </a>
+                                        <div class="flex flex-wrap justify-between mt-auto">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 rounded">
+                                                    <img class="w-full h-full overflow-hidden object-cover rounded object-center" src="/assets/images/users/avatar-1.jpg" alt="logo" />
+                                                </div>
+                                                <div class="ml-2">
+                                                    <a tabindex="0" class="cursor-pointer hover:text-gray-500 focus:text-gray-500 text-gray-800 dark:text-gray-100 focus:outline-none focus:underline"><h5 class=" font-medium text-sm">Fitbit Incorporation</h5></a>
+                                                    <p tabindex="0" class="focus:outline-none text-gray-500 dark:text-gray-400 text-xs font-medium">San Diego, California</p>
+                                                </div>
+                                            </div>
+                                            <a href="" class="block text-slate-500 dark:text-slate-400 hover:text-slate-600 underline decoration-1 decoration-dashed underline-offset-4  decoration-primary-500 font-medium  focus:outline-none self-center">Read More <i data-lucide="arrow-right" class="self-center inline-block ms-1 h-4 w-4"></i></a>
+                                        </div>
+                                    </div><!--end card-body-->
+                                </div><!--end col-->
+                            </div><!--end grid-->
+                        </div> <!--end card-->
+                        <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl shadow-lg w-full relative p-4">
+                            <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                <div class="col-span-12 sm:col-span-6  md:col-span-4 lg:col-span-4 xl:col-span-4 ">
+                                    <img src="/assets/images/widgets/sm-1.jpg" alt="" class="max-w-full h-auto rounded-xl">
+                                </div><!--end col-->
+                                <div class="col-span-12 sm:col-span-6  md:col-span-8 lg:col-span-8 xl:col-span-8 ">
+                                    <div class=" h-full flex flex-col p-3">
+                                        <div class="w-full block">
+                                            <span class="text-[12px] bg-pink-500/10 text-pink-500 dark:text-pink-600 rounded font-medium py-1 px-2 inline-block mb-3">Helth</span>
+                                            <span class="text-slate-700 dark:text-slate-300 font-medium text-xs ms-2">23 Aug 2023</span>
+                                        </div>
+                                        <a href="#" class="text-[20px] md:text-3xl lg:text-3xl xl:text-[32px] leading-[30px] mb-5 md:mb-0 font-spectral font-semibold  text-gray-800 dark:text-slate-200 block">
+                                            This is a best Blogs card for your business template.
+                                        </a>
+                                        <div class="flex flex-wrap justify-between mt-auto">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 rounded">
+                                                    <img class="w-full h-full overflow-hidden object-cover rounded object-center" src="/assets/images/users/avatar-1.jpg" alt="logo" />
+                                                </div>
+                                                <div class="ml-2">
+                                                    <a tabindex="0" class="cursor-pointer hover:text-gray-500 focus:text-gray-500 text-gray-800 dark:text-gray-100 focus:outline-none focus:underline"><h5 class=" font-medium text-sm">Fitbit Incorporation</h5></a>
+                                                    <p tabindex="0" class="focus:outline-none text-gray-500 dark:text-gray-400 text-xs font-medium">San Diego, California</p>
+                                                </div>
+                                            </div>
+                                            <a href="" class="block text-slate-500 dark:text-slate-400 hover:text-slate-600 underline decoration-1 decoration-dashed underline-offset-4  decoration-primary-500 font-medium  focus:outline-none self-center">Read More <i data-lucide="arrow-right" class="self-center inline-block ms-1 h-4 w-4"></i></a>
+                                        </div>
+                                    </div><!--end card-body-->
+                                </div><!--end col-->
+                            </div><!--end grid-->
+                        </div> <!--end card-->
+                    </div><!--end col-->
+                    <div class="col-span-12 sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-3 ">
+                        <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl shadow-lg w-full relative p-4 mb-4">
+                            <span class="font-medium border-b border-dashed border-pink-400 dark:text-slate-200">Related Posts</span>
+                        </div>
+                        <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
+                            <div class="col-span-12 sm:col-span-12  md:col-span-6 lg:col-span-12 xl:col-span-12 ">
+                                <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl shadow-lg w-full relative p-4">
+                                    <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                        <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-4 ">
+                                            <img src="/assets/images/widgets/sm-2.jpg" alt="" class="max-w-full h-auto rounded-xl">
+                                        </div><!--end col-->
+                                        <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-8 xl:col-span-8 ">
+                                            <div class=" h-full flex flex-col p-3">
+                                                <div class="w-full block">
+                                                    <span class="text-[12px] bg-green-500/10 text-green-500 dark:text-green-600 rounded font-medium py-0 px-2 inline-block mb-3">Fashion</span>
+                                                    <span class="text-slate-700 dark:text-slate-300 font-medium text-xs ms-2">23 Aug 2023</span>
+                                                </div>
+                                                <a href="#" class="text-lg font-semibold  text-gray-600 dark:text-slate-200 block leading-5 truncate hover:underline hover:underline-offset-[4px]">
+                                                    This is a best Blogs card for your.
+                                                </a>
+                                            </div><!--end card-body-->
+                                        </div><!--end col-->
+                                    </div><!--end grid-->
+                                </div> <!--end card-->
+                            </div><!--end col-->
+                            <div class="col-span-12 sm:col-span-12  md:col-span-6 lg:col-span-12 xl:col-span-12 ">
+                                <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl shadow-lg w-full relative p-4">
+                                    <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                        <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-4 ">
+                                            <img src="/assets/images/widgets/sm-1.jpg" alt="" class="max-w-full h-auto rounded-xl">
+                                        </div><!--end col-->
+                                        <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-8 xl:col-span-8 ">
+                                            <div class=" h-full flex flex-col p-3">
+                                                <div class="w-full block">
+                                                    <span class="text-[12px] bg-green-500/10 text-green-500 dark:text-green-600 rounded font-medium py-0 px-2 inline-block mb-3">Fashion</span>
+                                                    <span class="text-slate-700 dark:text-slate-300 font-medium text-xs ms-2">23 Aug 2023</span>
+                                                </div>
+                                                <a href="#" class="text-lg font-semibold  text-gray-600 dark:text-slate-200 block leading-5 truncate hover:underline hover:underline-offset-[4px]">
+                                                    This is a best Blogs card for your.
+                                                </a>
+                                            </div><!--end card-body-->
+                                        </div><!--end col-->
+                                    </div><!--end grid-->
+                                </div> <!--end card-->
+                            </div><!--end col-->
+                            <div class="col-span-12 sm:col-span-12  md:col-span-6 lg:col-span-12 xl:col-span-12 ">
+                                <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl shadow-lg w-full relative p-4">
+                                    <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                        <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-4 ">
+                                            <img src="/assets/images/widgets/sm-3.jpg" alt="" class="max-w-full h-auto rounded-xl">
+                                        </div><!--end col-->
+                                        <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-8 xl:col-span-8 ">
+                                            <div class=" h-full flex flex-col p-3">
+                                                <div class="w-full block">
+                                                    <span class="text-[12px] bg-green-500/10 text-green-500 dark:text-green-600 rounded font-medium py-0 px-2 inline-block mb-3">Fashion</span>
+                                                    <span class="text-slate-700 dark:text-slate-300 font-medium text-xs ms-2">23 Aug 2023</span>
+                                                </div>
+                                                <a href="#" class="text-lg font-semibold  text-gray-600 dark:text-slate-200 block leading-5 truncate hover:underline hover:underline-offset-[4px]">
+                                                    This is a best Blogs card for your.
+                                                </a>
+                                            </div><!--end card-body-->
+                                        </div><!--end col-->
+                                    </div><!--end grid-->
+                                </div> <!--end card-->
+                            </div><!--end col-->
+                            <div class="col-span-12 sm:col-span-12  md:col-span-6 lg:col-span-12 xl:col-span-12 ">
+                                <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl shadow-lg w-full relative p-4">
+                                    <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                        <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-4 ">
+                                            <img src="/assets/images/widgets/sm-2.jpg" alt="" class="max-w-full h-auto rounded-xl">
+                                        </div><!--end col-->
+                                        <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-8 xl:col-span-8 ">
+                                            <div class=" h-full flex flex-col p-3">
+                                                <div class="w-full block">
+                                                    <span class="text-[12px] bg-green-500/10 text-green-500 dark:text-green-600 rounded font-medium py-0 px-2 inline-block mb-3">Fashion</span>
+                                                    <span class="text-slate-700 dark:text-slate-300 font-medium text-xs ms-2">23 Aug 2023</span>
+                                                </div>
+                                                <a href="#" class="text-lg font-semibold  text-gray-600 dark:text-slate-200 block leading-5 truncate hover:underline hover:underline-offset-[4px]">
+                                                    This is a best Blogs card for your.
+                                                </a>
+                                            </div><!--end card-body-->
+                                        </div><!--end col-->
+                                    </div><!--end grid-->
+                                </div> <!--end card-->
+                            </div><!--end col-->
+                            <div class="col-span-12 sm:col-span-12  md:col-span-6 lg:col-span-12 xl:col-span-12 ">
+                                <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl shadow-lg w-full relative p-4">
+                                    <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
+                                        <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-4 ">
+                                            <img src="/assets/images/widgets/sm-4.jpg" alt="" class="max-w-full h-auto rounded-xl">
+                                        </div><!--end col-->
+                                        <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-8 xl:col-span-8 ">
+                                            <div class=" h-full flex flex-col p-3">
+                                                <div class="w-full block">
+                                                    <span class="text-[12px] bg-green-500/10 text-green-500 dark:text-green-600 rounded font-medium py-0 px-2 inline-block mb-3">Fashion</span>
+                                                    <span class="text-slate-700 dark:text-slate-300 font-medium text-xs ms-2">23 Aug 2023</span>
+                                                </div>
+                                                <a href="#" class="text-lg font-semibold  text-gray-600 dark:text-slate-200 block leading-5 truncate hover:underline hover:underline-offset-[4px]">
+                                                    This is a best Blogs card for your.
+                                                </a>
+                                            </div><!--end card-body-->
+                                        </div><!--end col-->
+                                    </div><!--end grid-->
+                                </div> <!--end card-->
+                            </div><!--end col-->
+                        </div><!--end grid-->
 
+                    </div><!--end col-->
 
+                </div><!--end inner-grid-->
+            </div><!--end container-->
+        </div><!--end section-->
+    </div><!--end Main-->
 
-                        <form method="post" action="subscribe">
-                            @csrf
-                            <!-- Name input -->
-                            <div class="form-outline mb-4" data-mdb-input-init>
-                                <input type="text" id="form5Example1" class="form-control" name="name" />
-                                <label class="form-label" for="form5Example1">Name</label>
-                            </div>
+    <!-- JAVASCRIPTS -->
+    <!-- <div class="menu-overlay"></div> -->
+    <script src="assets/libs/lucide/umd/lucide.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
 
-                            <!-- Email input -->
-                            <div class="form-outline mb-4" data-mdb-input-init>
-                                <input type="email" id="form5Example2" class="form-control" name="email" />
-                                <label class="form-label" for="form5Example2">Email address</label>
-                            </div>
-
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-lg m-2 bg-dark" data-mdb-ripple-init href="https://mdbootstrap.com/docs/standard/" >
-                                Subscribe
-                            </button>
-
-                            <div>
-
-
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <!--Section: Content-->
-        </div>
-    </main>
-    <!--Main layout-->
-
-    <!--Footer-->
-    <footer class="bg-light text-lg-start">
-        <div class="py-4 text-center">
-            <a role="button" class="btn btn-primary btn-lg m-2" data-mdb-ripple-init
-               href="addis" rel="nofollow" target="_blank">
-                Pre Launch Registration
-            </a>
-            <a role="button" class="btn btn-primary btn-lg m-2" data-mdb-ripple-init href="https://mdbootstrap.com/docs/standard/" target="_blank">
-                Invite Friends
-            </a>
-        </div>
-
-        <hr class="m-0" />
-
-        <div class="text-center py-4 align-items-center">
-            <p>Follow AddisSuq on social media</p>
-            <a href="https://www.youtube.com/channel/123" class="btn btn-primary m-1" role="button" data-mdb-ripple-init
-               rel="nofollow" target="_blank">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://www.facebook.com/rootsystemet" class="btn btn-primary m-1" role="button" rel="nofollow" data-mdb-ripple-init
-               target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com/rootsystem" class="btn btn-primary m-1" role="button" rel="nofollow" data-mdb-ripple-init
-               target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://github.com/mdbootstrap/shadyber9" class="btn btn-primary m-1" role="button" rel="nofollow" data-mdb-ripple-init
-               target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2024 Copyright:
-            <a class="text-dark" href="https://addissuq.com">addissuq.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!--Footer-->
-
-    <!-- Time Counter -->
-    <script type="text/javascript">
-        // Set the date we're counting down to
-        var countDownDate = new Date();
-        countDownDate.setDate(countDownDate.getDate() + 30);
-
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-            // Get todays date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now an the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the element with id="demo"
-            document.getElementById('time-counter').innerHTML =
-                days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
-
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById('time-counter').innerHTML = 'EXPIRED';
-            }
-        }, 1000);
-    </script>
-    <!-- MDB -->
-    <script type="text/javascript" src="/js/mdb.umd.min.js"></script>
+    <script src="assets/js/app.js"></script>
     </body>
 </html>
