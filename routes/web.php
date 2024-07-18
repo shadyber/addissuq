@@ -10,6 +10,8 @@ Route::get('/', function () {
     $blogs=\App\Models\Blog::lastN(12);
     return view('welcome')->with(['blogs'=>$blogs]);
 });
+Route::get('/blogitem', [BlogController::class,'index']);
+Route::get('/blogitem/{$slug}', [BlogController::class,'show']);
 
 Route::middleware([
     'auth:sanctum',
@@ -28,8 +30,6 @@ Route::middleware([
 
 });
 
-Route::get('/blog', [BlogController::class,'index']);
-Route::get('/blog/{$slug}', [BlogController::class,'show']);
 
 Route::get('/video', [VideoController::class,'index']);
 Route::get('/video/{$slug}', [VideoController::class,'show']);

@@ -10,12 +10,12 @@ class SearchController extends Controller
 {
 
 
-    public function  search($key){
+    public function  search(Request $request){
         //   $_key=$_GET['key'];
         $blogs = Blog::where('title', 'like', '%' . request('key') . '%')->where('detail', 'like', '%' . request('key') . '%')-> get();
         $videos = Video::where('title', 'like', '%' . request('key') . '%')->where('detail', 'like', '%' . request('key') . '%')-> get();
 
-        return view('search')->with(['blogs'=>$blogs]);
+        return view('search')->with(['blogs'=>$blogs,'videos'=>$videos]);
 
     }
 }

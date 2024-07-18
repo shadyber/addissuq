@@ -20,7 +20,9 @@
         <!-- MDB -->
         <link rel="stylesheet" href="/css/mdb.min.css" />
 
-
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 

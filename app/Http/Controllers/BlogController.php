@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\User;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\TwitterCard;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,6 +19,20 @@ class BlogController extends Controller
     public function index()
     {
         $blogs=Blog::paginate(9);
+
+
+        SEOMeta::setTitle('Addissuq : Latest News and Information About Crypto and Air Drops July ');
+        SEOMeta::setDescription('This is my page description');
+        SEOMeta::setCanonical('https://codecasts.com.br/lesson');
+
+        OpenGraph::setDescription('This is my page description');
+        OpenGraph::setTitle('Welcome To Addissuq Addissuq : Latest News and Information About Crypto and Air Drops July ');
+        OpenGraph::setUrl('https://addissuq.com');
+        OpenGraph::addProperty('type', 'articles');
+
+        TwitterCard::setTitle('Addissuq');
+        TwitterCard::setSite('@LuizVinicius73');
+
         return view('blog.index')->with(['blogs'=>$blogs]);
     }
 
@@ -80,13 +97,28 @@ class BlogController extends Controller
      */
     public function show( $slug)
     {
+        $blog = Blog::where('slug','LIKE', $slug)->get();
+        $blog=$blog[0];
         //$post = Post::whereSlug($slugString)->get();
         //
         //$post = Post::findBySlug($slugString);
         //
-        $blog = Blog::where('slug','LIKE', $slug)->get();
+
+        SEOMeta::setTitle('Addissuq :  '.$blog->title);
+        SEOMeta::setDescription(' '.$blog->detail);
+        SEOMeta::setCanonical('https://addissuq.com/blog/'.$blog->slug);
+
+        OpenGraph::setDescription(' '.$blog->detail);
+        OpenGraph::setTitle('Welcome To Addissuq Addissuq :'.$blog->detail);
+        OpenGraph::setUrl('https://addissuq.com/blog/'.$blog->slug);
+        OpenGraph::addProperty('type', 'articles');
+
+        TwitterCard::setTitle('Addissuq'.$blog->title);
+        TwitterCard::setSite('@LuizVinicius73');
+
+
         if(!$blog==null){
-            return view('blog.show')->with(['blog'=>$blog[0]]);
+            return view('blog.show')->with(['blog'=>$blog]);
         }
     }
 
