@@ -38,5 +38,9 @@ class BlogCategory extends Model
         return $this->hasMany(Blog::class);
     }
 
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
 
 }

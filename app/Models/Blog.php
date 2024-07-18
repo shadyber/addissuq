@@ -49,7 +49,9 @@ class Blog extends Model
     }
 
 
-
+    public function comments(){
+        return $this->hasMany(BlogComment::class);
+    }
 
     public static function lastN($n){
         return Blog::where('lang',config('app.locale'))->orderBy('id','desc')->take($n)->get();
@@ -74,6 +76,10 @@ class Blog extends Model
 
     }
 
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
 
 
 

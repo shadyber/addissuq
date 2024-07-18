@@ -78,13 +78,16 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Blog $blog)
+    public function show( $slug)
     {
         //$post = Post::whereSlug($slugString)->get();
         //
         //$post = Post::findBySlug($slugString);
         //
-        //$post = Post::findBySlugOrFail($slugString);
+        $blog = Blog::where('slug','LIKE', $slug)->get();
+        if(!$blog==null){
+            return view('blog.show')->with(['blog'=>$blog[0]]);
+        }
     }
 
     /**

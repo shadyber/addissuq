@@ -6,7 +6,8 @@ use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $blogs=\App\Models\Blog::lastN(12);
+    return view('welcome')->with(['blogs'=>$blogs]);
 });
 
 Route::middleware([
@@ -33,7 +34,7 @@ Route::get('/video', [VideoController::class,'index']);
 Route::get('/video/{$slug}', [VideoController::class,'show']);
 
 Route::get('/category', [BlogCategoryController::class,'index']);
-Route::get('/category/{$slug}', [BlogCategoryController::class,'show']);
+Route::get('/category/{slug}', [BlogCategoryController::class,'show']);
 
 
 Route::post('/subscribe', [\App\Http\Controllers\SubscriberController::class,'store'])->name('subscribe');
