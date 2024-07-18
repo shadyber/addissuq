@@ -14,8 +14,8 @@ class VideoController extends Controller
      */
     public function index()
     {
-        $vidos= Video::where('lang',config('app.locale'))->orderBy('id','desc')->paginate(9);
-        return view('video.index')->with(['videos'=>$vidos]);
+        $videos=Video::paginate(9);
+        return view('video.index')->with(['videos'=>$videos]);
     }
 
     /**

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,8 @@ Route::get('/video/{$slug}', [VideoController::class,'show']);
 Route::get('/category', [BlogCategoryController::class,'index']);
 Route::get('/category/{slug}', [BlogCategoryController::class,'show']);
 
+
+Route::get('/search',[SearchController::class,'search'])->name('search');
 
 Route::post('/subscribe', [\App\Http\Controllers\SubscriberController::class,'store'])->name('subscribe');
 Route::get('/language/{locale}', function ($locale) {
