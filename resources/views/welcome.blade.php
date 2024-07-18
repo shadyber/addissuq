@@ -50,13 +50,15 @@
                                         <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl shadow-lg w-full relative p-4 mb-4">
                                             <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
                                                 <div class="col-span-12 sm:col-span-6  md:col-span-4 lg:col-span-4 xl:col-span-4 ">
-                                                    <a href="/blog/{{$blog->slug}}">     <img src="{{$blog->photo}}" alt="" class="max-w-full h-auto rounded-xl"></a>
+                                                    <a href="/blog/{{$blog->slug}}">
+                                                        <img src="{{$blog->photo}}" alt="" class="max-w-full h-auto rounded-xl"></a>
                                                 </div><!--end col-->
                                                 <div class="col-span-12 sm:col-span-6  md:col-span-8 lg:col-span-8 xl:col-span-8 ">
                                                     <div class=" h-full flex flex-col p-3">
                                                         <div class="w-full block">
                                                             <span class="text-[12px] bg-pink-500/10 text-pink-500 dark:text-pink-600 rounded font-medium py-1 px-2 inline-block mb-3">{{$blog->category->title}}</span>
                                                             <span class="text-slate-700 dark:text-slate-300 font-medium text-xs ms-2"> {{$blog->created_at->diffForHumans()}}</span>
+                                                            <span class="text-slate-700 dark:text-slate-300 font-medium text-xs ms-2 "> visited: {{$blog->visit}}</span>
                                                         </div>
                                                         <a href="/blog/{{$blog->slug}}" class="text-[20px] md:text-3xl lg:text-3xl xl:text-[32px] leading-[30px] mb-5 md:mb-0 font-spectral font-semibold  text-gray-800 dark:text-slate-200 block">
                                                             {{$blog->title}}
@@ -82,12 +84,12 @@
                                         </div> <!--end card-->
                                     @endforeach
 
-
+                                        <div class="text-center justify-items-center"><a href="/blog" class="text-center font-medium btn">Load More ... </a></div>
 
                                 </div><!--end col-->
                                 <div class="col-span-12 sm:col-span-12  md:col-span-12 lg:col-span-4 xl:col-span-3 ">
                                     <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl shadow-lg w-full relative p-4 mb-4">
-                                        <span class="font-medium border-b border-dashed border-pink-400 dark:text-slate-200">Related Video Posts</span>
+                                        <span class="font-medium border-b border-dashed border-pink-400 dark:text-slate-200">Video Posts</span>
                                     </div>
                                     <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
 

@@ -21,11 +21,11 @@ class BlogController extends Controller
         $blogs=Blog::paginate(9);
 
 
-        SEOMeta::setTitle('Addissuq : Latest News and Information About Crypto and Air Drops July ');
-        SEOMeta::setDescription('This is my page description');
-        SEOMeta::setCanonical('https://codecasts.com.br/lesson');
+        SEOMeta::setTitle('Addissuq : Latest News and Information About Crypto Airdrops , Fashion, Sport , Technology , Poletics , Entertainment  ');
+        SEOMeta::setDescription('Latest News and Information About Crypto Airdrops , Fashion, Sport , Technology , Poletics , Entertainment  hamster , tapswap, notcoin, telegram, pixelverse, ai, ton,wallet,crypto');
+        SEOMeta::setCanonical('https://addissuq.com/blog');
 
-        OpenGraph::setDescription('This is my page description');
+        OpenGraph::setDescription('Latest News and Information About Crypto Airdrops , Fashion, Sport , Technology , Poletics , Entertainment  hamster , tapswap, notcoin, telegram, pixelverse, ai, ton,wallet,crypto');
         OpenGraph::setTitle('Welcome To Addissuq Addissuq : Latest News and Information About Crypto and Air Drops July ');
         OpenGraph::setUrl('https://addissuq.com');
         OpenGraph::addProperty('type', 'articles');
@@ -41,7 +41,16 @@ class BlogController extends Controller
      */
     public function create()
     {
-       return view('blog.create')->with(['category'=>BlogCategory::allCategories()]);
+
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        }else{
+            if(!Auth::user()->id==1) {
+                return redirect()->back()->with(['error'=>'You Dont Have a permission to access this page or file ']);
+            }
+        }
+
+        return view('blog.create')->with(['category'=>BlogCategory::allCategories()]);
     }
 
     /**
@@ -49,9 +58,15 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        if(!Auth::user()->id==1){
-            return redirect()->back()->with('error','You Don\'t Have This Permissions');
+
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        }else{
+            if(!Auth::user()->id==1) {
+                return redirect()->back()->with(['error'=>'You Dont Have a permission to access this page or file ']);
+            }
         }
+
 
         $request->validate([
             'title'=>'required',
@@ -104,14 +119,21 @@ class BlogController extends Controller
         //$post = Post::findBySlug($slugString);
         //
 
+        $blog->visit++;
+        $blog->save();
         SEOMeta::setTitle('Addissuq :  '.$blog->title);
         SEOMeta::setDescription(' '.$blog->detail);
         SEOMeta::setCanonical('https://addissuq.com/blog/'.$blog->slug);
+        SEOMeta::addMeta('article:published_time', $blog->created_at->toW3CString(), 'property');
+        SEOMeta::addMeta('article:section', $blog->category->title, 'property');
+        SEOMeta::addKeyword($blog->tags);
 
-        OpenGraph::setDescription(' '.$blog->detail);
+        OpenGraph::setDescription(' '.$blog->detail.' tags: '.$blog->tags);
         OpenGraph::setTitle('Welcome To Addissuq Addissuq :'.$blog->detail);
         OpenGraph::setUrl('https://addissuq.com/blog/'.$blog->slug);
         OpenGraph::addProperty('type', 'articles');
+        OpenGraph::addImage($blog->photo);
+
 
         TwitterCard::setTitle('Addissuq'.$blog->title);
         TwitterCard::setSite('@LuizVinicius73');
@@ -127,7 +149,15 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        }else{
+            if(!Auth::user()->id==1) {
+                return redirect()->back()->with(['error'=>'You Dont Have a permission to access this page or file ']);
+            }
+        }
+
     }
 
     /**
@@ -135,7 +165,14 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        }else{
+            if(!Auth::user()->id==1) {
+                return redirect()->back()->with(['error'=>'You Dont Have a permission to access this page or file ']);
+            }
+        }
+
     }
 
     /**
@@ -143,6 +180,15 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        }else{
+            if(!Auth::user()->id==1) {
+                return redirect()->back()->with(['error'=>'You Dont Have a permission to access this page or file ']);
+            }
+        }
+
+
     }
 }
