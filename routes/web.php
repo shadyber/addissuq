@@ -17,11 +17,24 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+
+    Route::resource('/blog', BlogController::class);
+    Route::resource('/video', VideoController::class);
+    Route::resource('/category', BlogCategoryController::class);
+
+
 });
 
-Route::resource('/blog', BlogController::class);
-Route::resource('/video', VideoController::class);
-Route::resource('/category', BlogCategoryController::class);
+Route::get('/blog', [BlogController::class,'index']);
+Route::get('/blog/{$slug}', [BlogController::class,'show']);
+
+Route::get('/video', [VideoController::class,'index']);
+Route::get('/video/{$slug}', [VideoController::class,'show']);
+
+Route::get('/category', [BlogCategoryController::class,'index']);
+Route::get('/category/{$slug}', [BlogCategoryController::class,'show']);
+
 
 Route::post('/subscribe', [\App\Http\Controllers\SubscriberController::class,'store'])->name('subscribe');
 Route::get('/language/{locale}', function ($locale) {

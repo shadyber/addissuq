@@ -10,6 +10,17 @@ class Blog extends Model
 {
     use HasFactory;
     use Sluggable;
+    protected $fillable = [
+        'title',
+        'detail',
+        'photo',
+        'thumb',
+        'lang',
+        'slug',
+        'tags',
+        'user_id',
+        'blog_category_id',
+    ];
 
     /**
      * Return the sluggable configuration array for this model.

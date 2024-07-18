@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\BlogCategory;
+use App\Models\User;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class BlogController extends Controller
 {
     /**
@@ -13,11 +15,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //$post = Post::whereSlug($slugString)->get();
-        //
-        //$post = Post::findBySlug($slugString);
-        //
-        //$post = Post::findBySlugOrFail($slugString);
+        $blogs=Blog::paginate(9);
+        return view('blog.index')->with(['blogs'=>$blogs]);
     }
 
     /**
@@ -33,9 +32,47 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //use \Cviebrock\EloquentSluggable\Services\SlugService;
-        //
-        //$slug = SlugService::createSlug(Post::class, 'slug', 'My First Post');
+        if(!Auth::user()->id==1){
+            return redirect()->back()->with('error','You Don\'t Have This Permissions');
+        }
+
+        $request->validate([
+            'title'=>'required',
+            'detail'=>'required',
+            'blog_category_id'=>'required',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+
+        ]);
+        if($request->hasFile('photo')) {
+            $imageName = time().'.'.$request->photo->extension();
+            $request->photo->move(public_path('images'), $imageName);        }
+
+//dd($request);
+        $lastblog=  Blog::create([
+                'title'=>$request->input('title'),
+                'detail'=>$request->input('detail'),
+                'slug'=>SlugService::createSlug(Blog::class,'slug',$request->title.$request->_token),
+                'photo'=>env('APP_URL').'/images/'.$imageName,
+                'thumb'=>env('APP_URL').'/images/'.$imageName,
+                'tags'=>$request->input('tags'),
+                'lang'=>$request->input('lang'),
+
+                'user_id'=>auth()->user()->id,
+
+                'blog_category_id'=>$request->input('blog_category_id'),
+            ]
+        );
+
+
+        $users=User::all();
+        foreach ($users as $user){
+            //  $user->Notify(new BlogCreatedNotification($lastblog));
+        }
+
+        return redirect()->back()->with('success','Article Created Succusfully!');
+
+
+
     }
 
     /**
