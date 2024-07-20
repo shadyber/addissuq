@@ -122,7 +122,7 @@ class BlogController extends Controller
         $blog->visit++;
         $blog->save();
         SEOMeta::setTitle('Addissuq :  '.$blog->title);
-        SEOMeta::setDescription(' '.$blog->detail);
+        SEOMeta::setDescription(' '.strip_tags($blog->detail));
         SEOMeta::setCanonical('https://addissuq.com/blog/'.$blog->slug);
         SEOMeta::addMeta('article:published_time', $blog->created_at->toW3CString(), 'property');
         SEOMeta::addMeta('article:section', $blog->category->title, 'property');

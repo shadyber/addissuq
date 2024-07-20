@@ -98,8 +98,8 @@
                                                 <div class="bg-white dark:bg-gray-800/40 backdrop-blur-2xl  rounded-2xl shadow-lg w-full relative p-4">
                                                     <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
                                                         <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-4 xl:col-span-4 ">
-                                                            <img src="{{$video->thumb_small}}" alt="" class="max-w-full h-auto rounded-xl">
-                                                        </div><!--end col-->
+                                                            <a href="/video/{{$video->slug}}"> <img src="{{$video->thumb_small}}" alt="" class="max-w-full h-auto rounded-xl">
+                                                            </a> </div><!--end col-->
                                                         <div class="col-span-12 sm:col-span-6  md:col-span-6 lg:col-span-8 xl:col-span-8 ">
                                                             <div class=" h-full flex flex-col p-3">
                                                                 <div class="w-full block">
@@ -107,7 +107,7 @@
                                                                     <span class="text-slate-700 dark:text-slate-300 font-medium text-xs ms-2">{{$video->created_at->diffForHumans()}}</span>
                                                                 </div>
                                                                 <a href="#" class="text-lg font-semibold  text-gray-600 dark:text-slate-200 block leading-5 truncate hover:underline hover:underline-offset-[4px]">
-                                                                    {{$video->title}}
+                                                                    <a href="/video/{{$video->slug}}">  {{$video->title}}</a>
                                                                 </a>
                                                             </div><!--end card-body-->
                                                         </div><!--end col-->

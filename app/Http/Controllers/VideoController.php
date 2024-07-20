@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Video;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class VideoController extends Controller
 {
@@ -23,6 +24,12 @@ class VideoController extends Controller
      */
     public function create()
     {
+
+Auth::check();
+$user=Auth::user();
+if($user==null){
+    return redirect()->route('login');
+}
         return view('video.create');
     }
 
@@ -31,6 +38,7 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
+        auth()->check();
         $lastvideo=  Video::create([
                 'title'=>$request->input('title'),
                 'detail'=>$request->input('detail'),
