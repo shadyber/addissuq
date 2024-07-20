@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Video;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\TwitterCard;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -77,6 +80,23 @@ if($user==null){
         $video=Video::where('slug',$slug)->first();
         $video->visit++;
         $video->save();
+
+        SEOMeta::setTitle('Addissuq :  '.$video->title);
+        SEOMeta::setDescription(' '.strip_tags($video->detail));
+        SEOMeta::setCanonical('https://addissuq.com/blog/'.$video->slug);
+        SEOMeta::addMeta('article:published_time', $video->created_at->toW3CString(), 'property');
+        SEOMeta::addMeta('article:section', $video->category->title, 'property');
+        SEOMeta::addKeyword($video->tags);
+
+        OpenGraph::setDescription(' '.$video->detail.' tags: '.$video->tags);
+        OpenGraph::setTitle('Welcome To Addissuq Addissuq :'.strip_tags($video->detail));
+        OpenGraph::setUrl('https://addissuq.com/blog/'.$video->slug);
+        OpenGraph::addProperty('type', 'articles');
+        OpenGraph::addImage($video->small_thumb);
+
+
+        TwitterCard::setTitle('Addissuq'.$video->title);
+        TwitterCard::setSite('@LuizVinicius73');
 
 
         return view('video.show')->with('video',$video);

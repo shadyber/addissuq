@@ -28,6 +28,11 @@
 
         <!-- Styles -->
         @livewireStyles
+
+
+
+
+
     </head>
     <body class="font-sans antialiased">
         <x-banner />
@@ -54,6 +59,7 @@
         @stack('modals')
 
         @livewireScripts
+
 
         <!-- <div class="menu-overlay"></div> -->
         <script src="assets/libs/lucide/umd/lucide.min.js"></script>

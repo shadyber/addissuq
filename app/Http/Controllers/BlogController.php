@@ -11,6 +11,8 @@ use Artesaos\SEOTools\Facades\TwitterCard;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
 class BlogController extends Controller
 {
     /**
@@ -76,16 +78,18 @@ class BlogController extends Controller
 
         ]);
         if($request->hasFile('photo')) {
-            $imageName = time().'.'.$request->photo->extension();
-            $request->photo->move(public_path('images'), $imageName);        }
+            $file = $request->file('photo') ;
+            $fileName = $file->getClientOriginalName() ;
+            $destinationPath = public_path().'/images' ;
+            $file->move($destinationPath,$fileName);       }
 
-//dd($request);
+
         $lastblog=  Blog::create([
                 'title'=>$request->input('title'),
                 'detail'=>$request->input('detail'),
                 'slug'=>SlugService::createSlug(Blog::class,'slug',$request->title.$request->_token),
-                'photo'=>env('APP_URL').'/images/'.$imageName,
-                'thumb'=>env('APP_URL').'/images/'.$imageName,
+                'photo'=>env('APP_URL').'/images/'.$fileName,
+                'thumb'=>env('APP_URL').'/images/'.$fileName,
                 'tags'=>$request->input('tags'),
                 'lang'=>$request->input('lang'),
 

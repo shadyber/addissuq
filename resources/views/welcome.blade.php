@@ -51,7 +51,7 @@
                                             <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4">
                                                 <div class="col-span-12 sm:col-span-6  md:col-span-4 lg:col-span-4 xl:col-span-4 ">
                                                     <a href="/blog/{{$blog->slug}}">
-                                                        <img src="{{$blog->photo}}" alt="" class="max-w-full h-auto rounded-xl"></a>
+                                                        <img src="{{ asset($blog->photo) }}" alt="{{ $blog->photo }}" class="max-w-full h-auto rounded-xl"></a>
                                                 </div><!--end col-->
                                                 <div class="col-span-12 sm:col-span-6  md:col-span-8 lg:col-span-8 xl:col-span-8 ">
                                                     <div class=" h-full flex flex-col p-3">
